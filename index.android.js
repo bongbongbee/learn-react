@@ -1,17 +1,17 @@
 import React, {Component} from 'react';
-import {AppRegistry, StyleSheet, Text, Image, View} from 'react-native';
+import {AppRegistry, StyleSheet, Text,TextInput, Image, View} from 'react-native';
 
 class HelloWorld extends Component {
     render() {
         return (
             <View style={{}}>
+              <PizzaTranslator/>
                 <Text>Hello world!</Text>
                 <Bananas></Bananas>
                 <LotsOfGreeting></LotsOfGreeting>
                 <Blink text='dummy'></Blink>
                 <LotsOfStyles></LotsOfStyles>
                 <FlexDimensionsBasics/>
-                {/* <FixedDimensionsBasics/> */}
 
             </View>
 
@@ -127,6 +127,28 @@ class FlexDimensionsBasics extends Component {
         <View style={{width: 50, height: 50, backgroundColor: 'powderblue'}} />
         <View style={{width: 50, height: 50, backgroundColor: 'skyblue'}} />
         <View style={{width: 50, height: 50, backgroundColor: 'steelblue'}} />
+      </View>
+    );
+  }
+}
+
+class PizzaTranslator extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {text: ''};
+  }
+
+  render() {
+    return (
+      <View style={{padding: 10}}>
+        <TextInput
+          style={{height: 40}}
+          placeholder="Type here to translate!"
+          onChangeText={(text) => this.setState({text})}
+        />
+        <Text style={{padding: 10, fontSize: 42}}>
+          {this.state.text.split(' ').map((word) => word && '🍕').join(' ')}
+        </Text>
       </View>
     );
   }
