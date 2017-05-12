@@ -4,7 +4,7 @@ import {AppRegistry, StyleSheet, Text, Image, View} from 'react-native';
 class HelloWorld extends Component {
     render() {
         return (
-            <View style={{alignItems: 'center'}}>
+            <View style={{}}>
                 <Text>Hello world!</Text>
                 <Bananas></Bananas>
                 <LotsOfGreeting></LotsOfGreeting>
@@ -123,7 +123,7 @@ class FlexDimensionsBasics extends Component {
       // Try removing the `flex: 1` on the parent View.
       // The parent will not have dimensions, so the children can't expand.
       // What if you add `height: 300` instead of `flex: 1`?
-      <View style={{flex: 1, flexDirection: 'row'}}>
+      <View style={{flex: 1, flexDirection: 'row', justifyContent: 'space-between'}}>
         <View style={{width: 50, height: 50, backgroundColor: 'powderblue'}} />
         <View style={{width: 50, height: 50, backgroundColor: 'skyblue'}} />
         <View style={{width: 50, height: 50, backgroundColor: 'steelblue'}} />
