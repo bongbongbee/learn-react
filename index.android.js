@@ -10,6 +10,9 @@ class HelloWorld extends Component {
                 <LotsOfGreeting></LotsOfGreeting>
                 <Blink text='dummy'></Blink>
                 <LotsOfStyles></LotsOfStyles>
+                <FlexDimensionsBasics/>
+                {/* <FixedDimensionsBasics/> */}
+
             </View>
 
         );
@@ -97,6 +100,33 @@ class LotsOfStyles extends Component {
         <Text style={styles.bigblue}>just bigblue</Text>
         <Text style={[styles.bigblue, styles.red]}>bigblue, then red</Text>
         <Text style={[styles.red, styles.bigblue]}>red, then bigblue</Text>
+      </View>
+    );
+  }
+}
+
+// class FixedDimensionsBasics extends Component {
+//   render() {
+//     return (
+//       <View>
+//         <View style={{width: 50, height: 50, backgroundColor: 'powderblue'}} />
+//         <View style={{width: 100, height: 100, backgroundColor: 'skyblue'}} />
+//         <View style={{width: 150, height: 150, backgroundColor: 'steelblue'}} />
+//       </View>
+//     );
+//   }
+// }
+
+class FlexDimensionsBasics extends Component {
+  render() {
+    return (
+      // Try removing the `flex: 1` on the parent View.
+      // The parent will not have dimensions, so the children can't expand.
+      // What if you add `height: 300` instead of `flex: 1`?
+      <View style={{flex: 1, flexDirection: 'row'}}>
+        <View style={{width: 50, height: 50, backgroundColor: 'powderblue'}} />
+        <View style={{width: 50, height: 50, backgroundColor: 'skyblue'}} />
+        <View style={{width: 50, height: 50, backgroundColor: 'steelblue'}} />
       </View>
     );
   }
