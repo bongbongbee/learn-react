@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {AppRegistry, StyleSheet, Text,TextInput, Image, View} from 'react-native';
+import {AppRegistry, StyleSheet,ScrollView, Text,TextInput, Image, View} from 'react-native';
 
 class HelloWorld extends Component {
     render() {
@@ -12,6 +12,7 @@ class HelloWorld extends Component {
                 <Blink text='dummy'></Blink>
                 <LotsOfStyles></LotsOfStyles>
                 <FlexDimensionsBasics/>
+                <IScrolledDownAndWhatHappenedNextShockedMe/>
 
             </View>
 
@@ -109,9 +110,9 @@ class LotsOfStyles extends Component {
 //   render() {
 //     return (
 //       <View>
-//         <View style={{width: 50, height: 50, backgroundColor: 'powderblue'}} />
+//         <View style={{width: 10, height: 10, backgroundColor: 'powderblue'}} />
 //         <View style={{width: 100, height: 100, backgroundColor: 'skyblue'}} />
-//         <View style={{width: 150, height: 150, backgroundColor: 'steelblue'}} />
+//         <View style={{width: 110, height: 110, backgroundColor: 'steelblue'}} />
 //       </View>
 //     );
 //   }
@@ -124,9 +125,9 @@ class FlexDimensionsBasics extends Component {
       // The parent will not have dimensions, so the children can't expand.
       // What if you add `height: 300` instead of `flex: 1`?
       <View style={{flex: 1, flexDirection: 'row', justifyContent: 'space-between'}}>
-        <View style={{width: 50, height: 50, backgroundColor: 'powderblue'}} />
-        <View style={{width: 50, height: 50, backgroundColor: 'skyblue'}} />
-        <View style={{width: 50, height: 50, backgroundColor: 'steelblue'}} />
+        <View style={{width: 10, height: 10, backgroundColor: 'powderblue'}} />
+        <View style={{width: 10, height: 10, backgroundColor: 'skyblue'}} />
+        <View style={{width: 10, height: 10, backgroundColor: 'steelblue'}} />
       </View>
     );
   }
@@ -150,6 +151,124 @@ class PizzaTranslator extends Component {
           {this.state.text.split(' ').map((word) => word && '🍕').join(' ')}
         </Text>
       </View>
+    );
+  }
+}
+
+class IScrolledDownAndWhatHappenedNextShockedMe extends Component {
+  render() {
+    let pic = {
+        uri: 'https://upload.wikimedia.org/wikipedia/commons/d/de/Bananavarieties.jpg'
+    }
+      return (
+        <ScrollView style={{height: 200}}>
+          <Text style={{fontSize:96}}>Scroll me plz</Text>
+          <Image source={pic} style ={{
+  width: 193,
+  height: 100
+}}/>
+          <Image source={pic} style ={{
+  width: 193,
+  height: 100
+}}/>
+          <Image source={pic} style ={{
+  width: 193,
+  height: 100
+}}/>
+          <Image source={pic} style ={{
+  width: 193,
+  height: 100
+}}/>
+          <Image source={pic} style ={{
+  width: 193,
+  height: 100
+}}/>
+          <Text style={{fontSize:96}}>If you like</Text>
+          <Image source={pic} style ={{
+  width: 193,
+  height: 100
+}}/>
+          <Image source={pic} style ={{
+  width: 193,
+  height: 100
+}}/>
+          <Image source={pic} style ={{
+  width: 193,
+  height: 100
+}}/>
+          <Image source={pic} style ={{
+  width: 193,
+  height: 100
+}}/>
+          <Image source={pic} style ={{
+  width: 193,
+  height: 100
+}}/>
+          <Text style={{fontSize:96}}>Scrolling down</Text>
+          <Image source={pic} style ={{
+  width: 193,
+  height: 100
+}}/>
+          <Image source={pic} style ={{
+  width: 193,
+  height: 100
+}}/>
+          <Image source={pic} style ={{
+  width: 193,
+  height: 100
+}}/>
+          <Image source={pic} style ={{
+  width: 193,
+  height: 100
+}}/>
+          <Image source={pic} style ={{
+  width: 193,
+  height: 100
+}}/>
+          <Text style={{fontSize:96}}>What's the best</Text>
+          <Image source={pic} style ={{
+  width: 193,
+  height: 100
+}}/>
+          <Image source={pic} style ={{
+  width: 193,
+  height: 100
+}}/>
+          <Image source={pic} style ={{
+  width: 193,
+  height: 100
+}}/>
+          <Image source={pic} style ={{
+  width: 193,
+  height: 100
+}}/>
+          <Image source={pic} style ={{
+  width: 193,
+  height: 100
+}}/>
+          <Text style={{fontSize:96}}>Framework around?</Text>
+          <Image source={pic} style ={{
+  width: 193,
+  height: 100
+}}/>
+          <Image source={pic} style ={{
+  width: 193,
+  height: 100
+}}/>
+          <Image source={pic} style ={{
+  width: 193,
+  height: 100
+}}/>
+          <Image source={pic} style ={{
+  width: 193,
+  height: 100
+}}/>
+          <Image source={pic} style ={{
+  width: 193,
+  height: 100
+}}/>
+          <Text style={{fontSize:80}}>React Native</Text>
+        </ScrollView>
     );
   }
 }
